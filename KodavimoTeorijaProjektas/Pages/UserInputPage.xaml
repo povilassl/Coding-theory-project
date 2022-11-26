@@ -1,0 +1,205 @@
+﻿<Page x:Class="KodavimoTeorijaProjektas.UserInputPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KodavimoTeorijaProjektas"
+      mc:Ignorable="d" 
+      Title="UserInputPage"
+      FontSize="20">
+    <ScrollViewer
+        VerticalScrollBarVisibility="Auto"
+        HorizontalScrollBarVisibility="Auto">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!--k and n inputs-->
+            <StackPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <Border
+                    BorderBrush="Black"
+                    BorderThickness="1">
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <StackPanel>
+                            <Label
+                                Content="k = "
+                                Height="50" />
+                            <Label
+                                Content="n = "
+                                Height="50" />
+                            <Label
+                                Content="pe = "
+                                Height="50" />
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBox
+                                x:Name="inputK"
+                                Text="5"
+                                Width="40"
+                                Height="40"
+                                Margin="5" />
+                            <TextBox
+                                x:Name="inputN"
+                                Text="10"
+                                Width="40"
+                                Height="40"
+                                Margin="5" />
+                            <TextBox
+                                x:Name="inputPe"
+                                Text="0.1"
+                                Width="40"
+                                Height="40"
+                                Margin="5" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                <Button
+                    Content="Validate"
+                    Margin="0,10,0,0"
+                    Click="InputButton_Click" />
+            </StackPanel>
+
+            <Image
+                x:Name="TestImage" />
+
+            <!--radio buttons-->
+            <StackPanel
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+                <Label
+                    Content="Generating matrix" />
+
+                <Border
+                    BorderBrush="Black"
+                    BorderThickness="1">
+                    <StackPanel>
+                        <RadioButton
+                            x:Name="radio1"
+                            Content="Input"
+                            VerticalContentAlignment="Center"
+                            Checked="RadioButtonInput_Checked" />
+                        <RadioButton
+                            x:Name="radio2"
+                            Content="Generate"
+                            VerticalContentAlignment="Center"
+                            Checked="RadioButtonGenerate_Checked" />
+                    </StackPanel>
+                </Border>
+
+                <Button
+                    x:Name="GenerateMatrixButton"
+                    Content="Generate matrix"
+                    Margin="0,10,0,0"
+                    Visibility="Hidden"
+                    Click="GenerateMatrixButton_Click" />
+            </StackPanel>
+
+            <!--MatrixG Input-->
+            <StackPanel
+                x:Name="matrixGinputPanel"
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <Label
+                    Content="Matrix G" />
+                <Border
+                    BorderBrush="Black"
+                    BorderThickness="1">
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <Label
+                            x:Name="unitaryMatrixForInput" />
+                        <TextBox
+                            x:Name="matrixGInput"
+                            MinWidth="100"
+                            MaxWidth="200"
+                            TextWrapping="Wrap"
+                            AcceptsReturn="True" />
+                    </StackPanel>
+                </Border>
+
+                <Button
+                    Content="Validate"
+                    Margin="0,10,0,0"
+                    Click="ValidateMatrixGInput_Click" />
+            </StackPanel>
+
+            <!--MatrixG Generated-->
+            <StackPanel
+                x:Name="matrixGgeneratedPanel"
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <Label
+                    Content="Matrix G" />
+                <Border
+                    BorderBrush="Black"
+                    BorderThickness="1">
+                    <Label
+                        x:Name="matrixG" />
+                </Border>
+                <!--filler-->
+                <Button
+                    Content=""
+                    Visibility="Hidden"
+                    Margin="10" />
+            </StackPanel>
+
+            <StackPanel
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                x:Name="matrixHPanel"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                
+                <!--Matrix H-->
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                    <Label
+                        Content="Matrix H" />
+
+                    <Border
+                        BorderBrush="Black"
+                        BorderThickness="1">
+                        <Label
+                            x:Name="matrixH" />
+                    </Border>
+                </StackPanel>
+
+                <!--buttons-->
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+                    <!--Coset Leader-->
+                    <Button Content="Syndromes"
+                            Margin="10"
+                            Click="SyndromesButton_Click"/>
+                    <Button Content="STD Table"
+                            Margin="10"
+                            Click="STDTableButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+            
+        </Grid>
+    </ScrollViewer>
+</Page>

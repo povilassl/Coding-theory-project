@@ -1,0 +1,166 @@
+﻿<Page x:Class="KodavimoTeorijaProjektas.EncodingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KodavimoTeorijaProjektas"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      FontSize="20"
+      Title="EncodingPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <!--Radio buttons-->
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+            <Label
+                Content="Select type"
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center"/>
+
+            <Border
+                BorderBrush="Black"
+                BorderThickness="1">
+                <StackPanel
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Margin="10">
+
+                    <RadioButton
+                        Click="VectorSelected_Checked"
+                        Content="Vector"
+                        VerticalContentAlignment="Center" />
+                    <RadioButton
+                        Click="MessageSelected_Checked"
+                        Content="Message"
+                        VerticalContentAlignment="Center" />
+                    <RadioButton
+                        Click="ImageSelected_Checked"
+                        Content="Image"
+                        VerticalContentAlignment="Center" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+        <!--Vector panel-->
+        <StackPanel
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="VectorPanel"
+            Visibility="Hidden">
+            <Label
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center"
+                Content="Input a vector" />
+            <TextBox 
+                x:Name="VectorInput"
+                Height="100" Width="200"
+                     TextWrapping="Wrap"/>
+            <Button 
+                Content="Encode vector"
+                Margin="0,10,0,0"
+                Click="ValidateButton_Click"/>
+        </StackPanel>
+
+        <!--Message panel-->
+        <StackPanel
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="MessagePanel"
+            Visibility="Hidden">
+            <Label
+                Margin="0,0,0,10"
+                HorizontalAlignment="Center"
+                Content="Input a message" />
+            <TextBox
+                x:Name="MessageInput"
+                Height="200"
+                Width="300"
+                AcceptsReturn="True"/>
+            <Button
+                Content="Input"
+                Margin="0,10,0,0"
+                Click="ValidateButton_Click" />
+        </StackPanel>
+
+        <!--Image panel-->
+        <StackPanel
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            x:Name="ImagePanel"
+            Visibility="Hidden">
+            <Label
+                Margin="0,0,0,10"
+                Content="Input an image" />
+            <Button
+                Content="Select"
+                Margin="0,10,0,0"
+                Click="SelectImageButton_Click" />
+        </StackPanel>
+
+        <!--Show encoded vector-->
+        <StackPanel
+            x:Name="EncodedVectorPanel"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Visibility="Collapsed">
+
+            <Label 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Encoded vector"
+                Margin="0,0,0,10"/>
+            <Border
+                BorderBrush="Black"
+                BorderThickness="1">
+                <TextBlock
+                    x:Name="EncodedVector"
+                    Width="400"
+                    TextWrapping="Wrap"
+                    Height="200" />
+            </Border>
+        </StackPanel>
+
+        <!--Uploaded image-->
+        <StackPanel
+            x:Name="UploadedImagePanel"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Visibility="Collapsed">
+
+            <Label
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Uploaded Image"
+                Margin="0,0,0,10" />
+            <Border
+                BorderBrush="Black"
+                BorderThickness="1">
+                <Image
+                    x:Name="UploadedImage"
+                    Width="400"
+                    Height="200" />
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>
