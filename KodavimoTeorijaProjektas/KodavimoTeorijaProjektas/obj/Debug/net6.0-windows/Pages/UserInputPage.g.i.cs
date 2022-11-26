@@ -165,7 +165,7 @@ namespace KodavimoTeorijaProjektas {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/KodavimoTeorijaProjektas;component/pages/userinputpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/KodavimoTeorijaProjektas;V1.0.0.0;component/pages/userinputpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\UserInputPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

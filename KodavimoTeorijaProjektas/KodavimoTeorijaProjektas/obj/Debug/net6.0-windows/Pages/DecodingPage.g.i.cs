@@ -237,7 +237,7 @@ namespace KodavimoTeorijaProjektas.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/KodavimoTeorijaProjektas;component/pages/decodingpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/KodavimoTeorijaProjektas;V1.0.0.0;component/pages/decodingpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\DecodingPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

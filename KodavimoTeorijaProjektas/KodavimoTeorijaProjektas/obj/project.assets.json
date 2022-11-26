@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dfgdfg\\source\\repos\\KodavimoTeorijaProjektas\\KodavimoTeorijaProjektas\\KodavimoTeorijaProjektas.csproj",
+      "projectUniqueName": "C:\\Users\\dfgdfg\\Desktop\\Coding-theory-project\\KodavimoTeorijaProjektas\\KodavimoTeorijaProjektas\\KodavimoTeorijaProjektas.csproj",
       "projectName": "KodavimoTeorijaProjektas",
-      "projectPath": "C:\\Users\\dfgdfg\\source\\repos\\KodavimoTeorijaProjektas\\KodavimoTeorijaProjektas\\KodavimoTeorijaProjektas.csproj",
+      "projectPath": "C:\\Users\\dfgdfg\\Desktop\\Coding-theory-project\\KodavimoTeorijaProjektas\\KodavimoTeorijaProjektas\\KodavimoTeorijaProjektas.csproj",
       "packagesPath": "C:\\Users\\dfgdfg\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dfgdfg\\source\\repos\\KodavimoTeorijaProjektas\\KodavimoTeorijaProjektas\\obj\\",
+      "outputPath": "C:\\Users\\dfgdfg\\Desktop\\Coding-theory-project\\KodavimoTeorijaProjektas\\KodavimoTeorijaProjektas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -61,7 +61,7 @@ namespace KodavimoTeorijaProjektas.Windows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/KodavimoTeorijaProjektas;component/windows/syndromeswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/KodavimoTeorijaProjektas;V1.0.0.0;component/windows/syndromeswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Windows\SyndromesWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
